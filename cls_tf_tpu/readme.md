@@ -16,13 +16,13 @@
 
 
 ### 2，jigsaw-distilbert模型
-model：distilbert-base-multilingual-cased
-dataset：只使用2018年的数据集
-epoch：训练集训练5epoch，验证集训练10epoch
-max_len：192
+* model：distilbert-base-multilingual-cased
+* dataset：只使用2018年的数据集
+* epoch：训练集训练5epoch，验证集训练10epoch
+* max_len：192
 
 ### 3，jigsaw-xlm-RoBerta模型
-model：jigsaw-mlm-finetuned-xlm-r-large   在测试集上使用masked language modelling 进行了微调（预训练）。  https://www.kaggle.com/riblidezso/jigsaw-mlm-finetuned-xlm-r-large
-dataset：使用2018，2019数据集，并使用了翻译数据集，将他们翻译成其他六种语言，并进行抽取。  https://www.kaggle.com/miklgr500/jigsaw-train-multilingual-coments-google-api
-训练策略：分别在各种语言上训练两轮，再在验证集训练5轮
-max_len：210
+* model：jigsaw-mlm-finetuned-xlm-r-large   在测试集上使用masked language modelling 进行了微调（预训练）。  https://www.kaggle.com/riblidezso/jigsaw-mlm-finetuned-xlm-r-large
+* dataset：使用2018，2019数据集，并使用了翻译数据集，将他们翻译成其他六种语言，并进行抽取。  https://www.kaggle.com/miklgr500/jigsaw-train-multilingual-coments-google-api
+* 训练策略：分别在各种语言上训练两轮，再在验证集训练5轮
+* max_len：210
