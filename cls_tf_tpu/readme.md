@@ -7,7 +7,7 @@
 ## 解决方案 ##
 主要利用TPU训练了三个模型
 
-1，jigsaw-bert模型
+### 1，jigsaw-bert模型
 model：bert-base-uncased
 dataset：2018，2019年的训练数据集 ，但是把测试集的六种语言都翻译成了英语，然后只对英语进行推理。 https://www.kaggle.com/kashnitsky/jigsaw-multilingual-toxic-test-translated
 epoch：35
@@ -15,13 +15,13 @@ epoch：35
 max_len:512
 
 
-2，jigsaw-distilbert模型
+### 2，jigsaw-distilbert模型
 model：distilbert-base-multilingual-cased
 dataset：只使用2018年的数据集
 epoch：训练集训练5epoch，验证集训练10epoch
 max_len：192
 
-3，jigsaw-xlm-RoBerta模型
+### 3，jigsaw-xlm-RoBerta模型
 model：jigsaw-mlm-finetuned-xlm-r-large   在测试集上使用masked language modelling 进行了微调（预训练）。  https://www.kaggle.com/riblidezso/jigsaw-mlm-finetuned-xlm-r-large
 dataset：使用2018，2019数据集，并使用了翻译数据集，将他们翻译成其他六种语言，并进行抽取。  https://www.kaggle.com/miklgr500/jigsaw-train-multilingual-coments-google-api
 训练策略：分别在各种语言上训练两轮，再在验证集训练5轮
