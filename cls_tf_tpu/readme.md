@@ -8,11 +8,11 @@
 主要利用TPU训练了三个模型
 
 ### 1，jigsaw-bert模型
-model：bert-base-uncased
-dataset：2018，2019年的训练数据集 ，但是把测试集的六种语言都翻译成了英语，然后只对英语进行推理。 https://www.kaggle.com/kashnitsky/jigsaw-multilingual-toxic-test-translated
-epoch：35
-使用了focal loss和自定义的学习率优化器
-max_len:512
+* model：bert-base-uncased  
+* dataset：2018，2019年的训练数据集 ，但是把测试集的六种语言都翻译成了英语，然后只对英语进行推理。 https://www.kaggle.com/kashnitsky/jigsaw-multilingual-toxic-test-translated 
+* epoch：35
+* 使用了focal loss和自定义的学习率优化器
+* ax_len:512
 
 
 ### 2，jigsaw-distilbert模型
